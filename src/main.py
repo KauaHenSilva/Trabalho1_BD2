@@ -15,7 +15,7 @@ from BD.post.post import Post  # pylint: disable=import-error
 RANGE_ID_CLIENTES = 1_000_000_00
 RANGE_ID_POSTS = 1_000_000_000
 
-TEMPO = 100
+TEMPO = 15
 
 
 def inserir_clientes(obj_cliente: Cliente):
