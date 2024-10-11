@@ -24,4 +24,4 @@ services:
     
 networks:
   project-network:
-    external: true
+    driver: overlay
