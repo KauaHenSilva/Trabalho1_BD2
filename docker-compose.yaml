@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   orientdb:
-    image: orientdb:2.2.37
+    image: kauahensilva/orientdb:2.2.37
     ports:
       - "2424:2424"
       - "2480:2480"
@@ -12,7 +12,7 @@ services:
       - /orientdb/config:/opt/orientdb/config
       - /orientdb/databases:/opt/orientdb/databases
       - /orientdb/backup:/opt/orientdb/backup
-    # mem_limit: 512m
+    restart: always
 
 
   # server:

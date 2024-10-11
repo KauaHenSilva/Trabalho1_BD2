@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+
+  db:
+    restart: always
+    image: kauahensilva/orientdb:2.2.37
+    networks:
+      - project-network
+    ports:
+      - "2424:2424"
+      - "2480:2480"
+    volumes:
+      - /orientdb/config:/opt/orientdb/config
+      - /orientdb/databases:/opt/orientdb/databases
+      - /orientdb/backup:/opt/orientdb/backup
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      placement:
+        preferences:
+          - spread: node.hostname
+    
+networks:
+  project-network:
+    external: true
