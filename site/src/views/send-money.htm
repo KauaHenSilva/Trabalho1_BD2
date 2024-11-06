@@ -1,0 +1,30 @@
+{% extends "layout.htm" %}
+
+{% set pageId = "page-send-money" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="./style/style.css">
+{% endblock styles %}
+
+
+{% block content %}
+    {% include "partials/page-holder.htm" %} 
+    
+    <form action="/send" method="POST">
+        <div class="style-info">
+            <p>Nome de Usuario da Pessoa:</p>
+            <input type="text" name="userSend"  id="" placeholder="Insira o nome aqui" required>
+        </div>
+        <div class="style-info">
+            <p>Nome de Usuario da Pessoa:</p>
+            <input type="number" name="valueSend" id="" placeholder="Insira o valor aqui" required>
+        </div>
+        <div class="style-info">
+            <button type="submit"> Enviar</button>
+        </div>
+    </form>
+{% endblock content %}
+
+{% block scripts %}
+    <script src="/script/script.js"></script>
+{% endblock scripts %}
