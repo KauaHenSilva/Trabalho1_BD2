@@ -1,2 +1,3 @@
 docker network create --driver=bridge --subnet=192.168.1.0/24 --gateway=192.168.1.1 --opt com.docker.network.bridge.name=br-wifi --scope swarm wifi_network
 
+docker stack deploy --compose-file docker-stack.yml project 

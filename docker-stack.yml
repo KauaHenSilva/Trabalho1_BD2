@@ -9,7 +9,7 @@ services:
     environment:
       ORIENTDB_ROOT_PASSWORD: 'root'
     deploy:
-      replicas: 1
+      replicas: 2
       restart_policy:
         condition: on-failure
     networks:
