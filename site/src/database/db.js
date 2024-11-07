@@ -3,7 +3,7 @@ require('dotenv').config();
 
 // Conectando ao OrientDB
 const server = orientjs({
-  host: process.env.NAME_DB || 'localhost',
+  host: process.env.NAME_DB || '192.168.1.24',
   port: process.env.DB_PORT || 2424,
   username: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || 'root',
