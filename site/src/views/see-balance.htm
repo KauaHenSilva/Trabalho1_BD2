@@ -1,36 +1,36 @@
 {% extends "layout.htm" %}
 
-{% set pageId = "page-see-balance" %}
+    {% set pageId = "page-see-balance" %}
 
-{% block styles %}
-    <link rel="stylesheet" href="./style/style.css">
-{% endblock styles %}
+    {% block styles %}
+        <link rel="stylesheet" href="./style/style.css">
+    {% endblock styles %}
 
-{% block content %}
-    {% include "partials/page-holder.htm" %} 
+    {% block content %}
+        {% include "partials/page-holder.htm" %} 
 
-    {% if found == 1 %}
-        <div>
-            <div class="info-account">
-                <p>Nome:</p>
-                <p>{{informacao.userName}}</p>
+        {% if found == 1 %}
+            <div>
+                <div class="info-account">
+                    <p>Nome:</p>
+                    <p>{{informacao.userName}}</p>
+                </div>
+                <div class="info-account">
+                    <p>Saldo:</p>
+                    <p>R${{informacao.balance}},00</p>
+                </div>
+                <div class="info-account">
+                    <p>Data de Nascimento:</p>
+                    <p>{{informacao.datebirth}}</p>
+                </div>
             </div>
-            <div class="info-account">
-                <p>Saldo:</p>
-                <p>R${{informacao.balance}},00</p>
-            </div>
-            <div class="info-account">
-                <p>Data de Nascimento:</p>
-                <p>{{informacao.datebirth}}</p>
-            </div>
-        </div>
-    {% else %}
-        <h4><strong>Sem informações para o usuario</strong></h4>
-    {% endif %}
-    
-    
-{% endblock content %}
+        {% else %}
+            <h4><strong>Sem informações para o usuario</strong></h4>
+        {% endif %}
+        
+        
+    {% endblock content %}
 
-{% block scripts %}
-    <script src="/script/script.js"></script>
-{% endblock scripts %}
+    {% block scripts %}
+        <script src="./scripts/index.js"></script>
+    {% endblock scripts %}

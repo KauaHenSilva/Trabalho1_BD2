@@ -8,14 +8,10 @@
 
     {% block content %}
         {% include "partials/page-holder.htm" %}
-        <form action="/saveaccount" method="POST">
+        <form action="/loginaccount" method="POST">
             <div class="style-info">
-                <p>Informe seu nome</p>
+                <p>Informe seu nome de usuario</p>
                 <input type="text" name="userName" id="" placeholder="Nome" required>
-            </div>
-            <div class="style-info">
-                <p>Informe sua data de nascimento</p>
-                <input type="date" name="datebirth" id="" required>
             </div>
             <div class="style-info">
                 <p>Digite sua senha</p>
@@ -23,7 +19,7 @@
             </div>
             
             <div class="style-info">
-                <button type="submit">Criar Conta</button>
+                <button type="submit">Acessar Conta</button>
             </div>
 
         </form>

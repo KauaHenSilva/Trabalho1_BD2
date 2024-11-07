@@ -12,7 +12,9 @@ const server = orientjs({
 var db = server.create({
     name:    'ola',
     type:    'graph',
-    storage: 'plocal'
+    storage: 'plocal',
+    username: "admin",
+    password: "admin"
   }
 ).then(
   (create) => console.log('Created Database:', create.name)
@@ -23,6 +25,17 @@ var db = server.create({
 db = server.use('ola');
 
 module.exports = db;
+
+// db.select('balance')
+// .from('Cliente')
+// .where({
+//   userName: "jonasCesar"
+// })
+// .limit(1)
+// .one().then((result) => {
+//   console.log(result)
+// });
+
 
 // console.log("Ola:", search)
 

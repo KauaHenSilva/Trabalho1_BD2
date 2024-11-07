@@ -1,44 +1,52 @@
 {% extends "layout.htm" %}
 
-{% block title %}
-    <title> {{titulo}} </title>
-{% endblock title %}
+    {% block title %}
+        <title> {{titulo}} </title>
+    {% endblock title %}
 
-{% set pageId = "page-home" %}
+    {% set pageId = "page-home" %}
 
-{% block styles %}
-    <link rel="stylesheet" href="./style/style.css">
-{% endblock styles %}
+    {% block styles %}
+        <link rel="stylesheet" href="./style/style.css">
+    {% endblock styles %}
 
-{% block content %}
-    <div class="opcoes">
-        <div class="opcao">
-            <div class="image">
-                <a href="/create-account">
-                    <img src="/images/pessoas.png" alt="Pessoa">
-                </a>
+    {% block content %}
+        <div class="opcoes">
+            <div class="opcao">
+                <div class="image">
+                    <a href="/create-account">
+                        <img src="/images/pessoas.png" alt="Pessoa">
+                    </a>
+                </div>
+                <p>Criar Conta</p>
             </div>
-            <p>Criar Conta</p>
-        </div>
-        <div class="opcao">
-            <div class="image">
-                <a href="/send-money">
-                    <img src="/images/mais.png" alt="Mais">
-                </a>
+            <div class="opcao">
+                <div class="image">
+                    <a href="/login-account">
+                        <img src="/images/pessoas.png" alt="Pessoa">
+                    </a>
+                </div>
+                <p>Fazer Login</p>
             </div>
-            <p>Enviar Dinheiro</p>
-        </div>
-        <div class="opcao">
-            <div class="image">
-                <a href="/see-balance">
-                    <img src="/images/mais.png" alt="Mais">
-                </a>
+            <div class="opcao">
+                <div class="image">
+                    <a href="/send-money">
+                        <img src="/images/mais.png" alt="Mais">
+                    </a>
+                </div>
+                <p>Enviar Dinheiro</p>
             </div>
-            <p>Ver Saldo</p>
+            <div class="opcao">
+                <div class="image">
+                    <a href="/see-balance">
+                        <img src="/images/mais.png" alt="Mais">
+                    </a>
+                </div>
+                <p>Ver Saldo</p>
+            </div>
         </div>
-    </div>
-{% endblock content %}
+    {% endblock content %}
 
-{% block scripts %}
-    <script src="/script/script.js"></script>
-{% endblock scripts %}
+    {% block scripts %}
+        <script src="./scripts/index.js"></script>
+    {% endblock scripts %}
