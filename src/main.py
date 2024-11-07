@@ -17,7 +17,6 @@ RANGE_ID_POSTS = 1_000_000_000
 
 TEMPO = 15
 
-
 def inserir_clientes(obj_cliente: Cliente):
     """
     Insere clientes no banco de dados periodicamente.
@@ -30,7 +29,6 @@ def inserir_clientes(obj_cliente: Cliente):
             obj_cliente.create_client(f"Cliente{x}", x)  # Criar cliente com nome e ID
         except Exception as e:  # pylint: disable=broad-except
             print(f"Erro ao inserir cliente {x}: {e}")
-
 
 def inserir_posts(obj_cliente: Cliente, obj_post: Post):
     """
@@ -47,7 +45,6 @@ def inserir_posts(obj_cliente: Cliente, obj_post: Post):
             )  # Criar post para o cliente
         except Exception as e:  # pylint: disable=broad-except
             print(f"Erro ao inserir post: {e}")
-
 
 def inserir_seguir(obj_cliente: Cliente, obj_seguir: SeguirCliente):
     """
@@ -66,7 +63,6 @@ def inserir_seguir(obj_cliente: Cliente, obj_seguir: SeguirCliente):
                 )  # Criar relacionamento de seguir
         except Exception as e:  # pylint: disable=broad-except
             print(f"Erro ao criar relacionamento de seguir: {e}")
-
 
 if __name__ == "__main__":
     try:

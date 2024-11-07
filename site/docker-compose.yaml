@@ -6,19 +6,21 @@ services:
     ports:
       - "2424:2424"
       - "2480:2480"
+    network_mode: "host"
     volumes:
       - /orentdb/config:/opt/orientdb/config
       - /orientdb/databases:/opt/orientdb/databases
-      - /orientdb/backup:/opt/orientdb/backupi
+      - /orientdb/backup:/opt/orientdb/backup
     environment:
       ORIENTDB_ROOT_PASSWORD: 'root'
-    deploy:
-      replicas: 1
-      restart_policy:
-        condition: on-failure
-      placement:
-        preferences:
-          - spread: node.hostname
+    
+    # deploy:
+    #   replicas: 1
+    #   restart_policy:
+    #     condition: on-failure
+    #   placement:
+    #     preferences:
+    #       - spread: node.hostname
           
   # server:
   #   build:

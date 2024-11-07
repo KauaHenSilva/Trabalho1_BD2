@@ -12,9 +12,22 @@ services:
       replicas: 1
       restart_policy:
         condition: on-failure
+<<<<<<< HEAD
     networks:
       - wifi_network
 
 networks:
   wifi_network:
     external: true
+=======
+      placement:
+        preferences:
+          - spread: node.hostname
+
+networks:
+  project-network:
+    driver: overlay
+    ipam:
+      config:
+        - subnet: 10.180.41.0/24
+>>>>>>> 6d085d6bc0bdc54b320d6f4984222d42f491d352

@@ -1,0 +1,30 @@
+{% extends "layout.htm" %}
+
+    {% set pageId = "page-create-account" %}
+
+    {% block styles %}
+        <link rel="stylesheet" href="./style/style.css">
+    {% endblock styles %}
+
+    {% block content %}
+        {% include "partials/page-holder.htm" %}
+        <form action="/loginaccount" method="POST">
+            <div class="style-info">
+                <p>Informe seu nome de usuario</p>
+                <input type="text" name="userName" id="" placeholder="Nome" required>
+            </div>
+            <div class="style-info">
+                <p>Digite sua senha</p>
+                <input type="password" name="password" id="" placeholder="Insira sua senha" required>
+            </div>
+            
+            <div class="style-info">
+                <button type="submit">Acessar Conta</button>
+            </div>
+
+        </form>
+    {% endblock content %}
+
+    {% block scripts %}
+        <script src="./scripts/index.js"></script>
+    {% endblock scripts %}
