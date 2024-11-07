@@ -1,0 +1,39 @@
+{% extends "layout.htm" %}
+
+    {% set pageId = "page-send-money" %}
+
+    {% block styles %}
+        <link rel="stylesheet" href="./style/style.css">
+    {% endblock styles %}
+
+    {% block content %}
+        {% include "partials/page-holder.htm" %} 
+        
+        <form id="sendForm" action="/send" method="POST">
+            <div class="style-info">
+                <div style="display:flex;flex-direction:row">
+                    <p>Seu Saldo:</p>
+                    <p id="saldo">{{saldo}}</p>
+                </div>
+            </div>
+            <div class="style-info">
+                <p>Nome de Usuario da Pessoa:</p>
+                <input type="text" name="userSend" id="userSend" placeholder="Insira o nome aqui" required>
+                <small id="errorName" style="color: red; display: none;">
+                </small>
+            </div>
+            <div class="style-info">
+                <p>Valor que deseja enviar:</p>
+                <input type="number" name="valueSend" id="valueSend" placeholder="Insira o valor aqui" required>
+                <small id="errorValue" style="color: red; display: none;">
+                </small>
+            </div>
+            <div class="style-info">
+                <input type="button" onclick="enviarDinheiro()" value="Enviar">
+            </div>
+        </form>
+    {% endblock content %}
+
+    {% block scripts %}
+        <script src="./scripts/index.js"></script>
+    {% endblock scripts %}

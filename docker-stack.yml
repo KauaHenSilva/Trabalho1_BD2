@@ -1,7 +1,6 @@
 version: '3.9'
 
 services:
-
   db:
     restart: always
     image: kauahensilva/orientdb:2.2.37
@@ -21,7 +20,10 @@ services:
       placement:
         preferences:
           - spread: node.hostname
-    
+
 networks:
   project-network:
-    external: true
+    driver: overlay
+    ipam:
+      config:
+        - subnet: 10.180.41.0/24

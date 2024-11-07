@@ -1,0 +1,77 @@
+:root{
+    --color-div: rgba(32, 31, 31, 0.479);
+    --color-palavras: rgb(0, 0, 0);
+    --color-div-info: rgba(217,217,217,1);
+}
+
+header {
+    flex: flex;
+    justify-content: space-between;
+}
+
+header a{
+    text-decoration: none;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    flex: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-div);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+.style-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+input{
+    border-radius: 15px;
+}
+
+#page-send-money p{
+    color: var(--color-palavras);
+}
+
+#page-create-account p{
+    color: var(--color-palavras);
+}
+
+#page-home .opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#page-home .opcao {
+    display: flex; 
+    align-items:center; 
+    gap: 10px;
+}
+
+#page-home .opcao .image{
+    background-color:var(--color-div); 
+    border-radius: 10px;
+}
+
+#page-home .opcao .image a img{
+    width: 100px;
+    padding: 10px;
+}
+
+/* #page-create-account form .style-info{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-div);
+    } */
