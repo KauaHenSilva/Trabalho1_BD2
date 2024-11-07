@@ -20,7 +20,7 @@ class BD:
         Método construtor da classe BD. Estabelece a conexão inicial com o
         servidor e tenta reconectar em caso de falha.
         """
-        host = getenv("HOST", "localhost")
+        host = getenv("HOST", "10.180.44.13")
         self.client = OrientDB(host, 2424)
 
         self.try_connection()
